@@ -44,7 +44,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="s6t-Le-MTA">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="s6t-Le-MTA" customClass="SliderTableViewCell" customModule="TimeSliderDistribution" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="143" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s6t-Le-MTA" id="KJx-FO-xov">
@@ -76,6 +76,10 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="R01-fz-g2T" secondAttribute="trailing" constant="65" id="ihf-7g-Dk8"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="timeSlider" destination="R01-fz-g2T" id="rcR-wI-EPE"/>
+                                    <outlet property="timeTotalLabel" destination="m2f-1g-iHy" id="LxH-bL-GMx"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -86,7 +90,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wb0-2c-DHM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="163" y="10"/>
+            <point key="canvasLocation" x="42" y="22"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">

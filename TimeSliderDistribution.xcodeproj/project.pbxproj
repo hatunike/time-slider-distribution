@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		002A1DE41C59E92C000F005B /* SliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002A1DE31C59E92C000F005B /* SliderTableViewCell.swift */; };
 		007ECFC41C57169E0048B7EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007ECFC31C57169E0048B7EE /* AppDelegate.swift */; };
 		007ECFC61C57169E0048B7EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007ECFC51C57169E0048B7EE /* ViewController.swift */; };
 		007ECFC91C57169E0048B7EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007ECFC71C57169E0048B7EE /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		002A1DE31C59E92C000F005B /* SliderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderTableViewCell.swift; sourceTree = "<group>"; };
 		007ECFC01C57169E0048B7EE /* TimeSliderDistribution.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeSliderDistribution.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		007ECFC31C57169E0048B7EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		007ECFC51C57169E0048B7EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				007ECFC31C57169E0048B7EE /* AppDelegate.swift */,
 				007ECFC51C57169E0048B7EE /* ViewController.swift */,
 				007ECFC71C57169E0048B7EE /* Main.storyboard */,
+				002A1DE31C59E92C000F005B /* SliderTableViewCell.swift */,
 				007ECFCA1C57169E0048B7EE /* Assets.xcassets */,
 				007ECFCC1C57169E0048B7EE /* LaunchScreen.storyboard */,
 				007ECFCF1C57169E0048B7EE /* Info.plist */,
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				007ECFC61C57169E0048B7EE /* ViewController.swift in Sources */,
+				002A1DE41C59E92C000F005B /* SliderTableViewCell.swift in Sources */,
 				007ECFC41C57169E0048B7EE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +488,7 @@
 				007ECFEA1C57169E0048B7EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		007ECFEB1C57169E0048B7EE /* Build configuration list for PBXNativeTarget "TimeSliderDistributionTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +497,7 @@
 				007ECFED1C57169E0048B7EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		007ECFEE1C57169E0048B7EE /* Build configuration list for PBXNativeTarget "TimeSliderDistributionUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +506,7 @@
 				007ECFF01C57169E0048B7EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
