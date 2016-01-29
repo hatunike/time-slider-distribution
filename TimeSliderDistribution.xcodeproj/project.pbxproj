@@ -15,6 +15,7 @@
 		007ECFCE1C57169E0048B7EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007ECFCC1C57169E0048B7EE /* LaunchScreen.storyboard */; };
 		007ECFD91C57169E0048B7EE /* TimeSliderDistributionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007ECFD81C57169E0048B7EE /* TimeSliderDistributionTests.swift */; };
 		007ECFE41C57169E0048B7EE /* TimeSliderDistributionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007ECFE31C57169E0048B7EE /* TimeSliderDistributionUITests.swift */; };
+		00ED41231C5B056B008833BE /* SliderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ED41221C5B056B008833BE /* SliderTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		007ECFDF1C57169E0048B7EE /* TimeSliderDistributionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeSliderDistributionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		007ECFE31C57169E0048B7EE /* TimeSliderDistributionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSliderDistributionUITests.swift; sourceTree = "<group>"; };
 		007ECFE51C57169E0048B7EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00ED41221C5B056B008833BE /* SliderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				007ECFC51C57169E0048B7EE /* ViewController.swift */,
 				007ECFC71C57169E0048B7EE /* Main.storyboard */,
 				002A1DE31C59E92C000F005B /* SliderTableViewCell.swift */,
+				00ED41221C5B056B008833BE /* SliderTableViewController.swift */,
 				007ECFCA1C57169E0048B7EE /* Assets.xcassets */,
 				007ECFCC1C57169E0048B7EE /* LaunchScreen.storyboard */,
 				007ECFCF1C57169E0048B7EE /* Info.plist */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00ED41231C5B056B008833BE /* SliderTableViewController.swift in Sources */,
 				007ECFC61C57169E0048B7EE /* ViewController.swift in Sources */,
 				002A1DE41C59E92C000F005B /* SliderTableViewCell.swift in Sources */,
 				007ECFC41C57169E0048B7EE /* AppDelegate.swift in Sources */,
