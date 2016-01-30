@@ -13,7 +13,9 @@ struct TimeSlider {
 
 class SliderTableViewController: UITableViewController {
 
+    @IBOutlet var totalTime: UITextField!
     var sliders = [TimeSlider]()
+    var totalSeconds = 0
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as!SliderTableViewCell
@@ -30,6 +32,17 @@ class SliderTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sliders.count
+    }
+    
+    func addButtonPressed() {
+        
+        let newSlider = TimeSlider(sliderProgress: 0, timeInSeconds: totalSeconds)
+        
+        sliders.append(newSlider)
+    }
+    
+    func secondsLeftToSpend() -> Int {
+       return sliders.reduce(0) { $0 + $1.timeInSeconds }
     }
     
 }

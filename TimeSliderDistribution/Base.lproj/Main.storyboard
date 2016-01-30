@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Slider Table View Controller-->
         <scene sceneID="MwQ-ux-H6i">
             <objects>
-                <tableViewController id="g50-ff-UVm" sceneMemberID="viewController">
+                <tableViewController id="g50-ff-UVm" customClass="SliderTableViewController" customModule="TimeSliderDistribution" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="6Uf-Fj-14D">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,6 +87,9 @@
                             <outlet property="delegate" destination="g50-ff-UVm" id="BGe-V1-MOS"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="totalTime" destination="joy-Tv-bnd" id="gZ0-TE-4Rv"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wb0-2c-DHM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
