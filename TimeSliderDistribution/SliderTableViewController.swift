@@ -20,25 +20,25 @@ class SliderTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as!SliderTableViewCell
         
-        let tSlider = sliders[indexPath.row]
+        let tSlider = sliders[indexPath.section]
         cell.timeSlider.setValue(Float(tSlider.sliderProgress), animated: true)
 
         return cell
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sliders.count
     }
     
-    func addButtonPressed() {
-        
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    @IBAction func addSliderButtonPressed(sender: UIButton) {
         let newSlider = TimeSlider(sliderProgress: 0, timeInSeconds: totalSeconds)
         
         sliders.append(newSlider)
+        tableView.reloadData()
     }
     
     func secondsLeftToSpend() -> Int {
