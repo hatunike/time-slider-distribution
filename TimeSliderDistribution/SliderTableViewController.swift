@@ -3,11 +3,11 @@ import Foundation
 import UIKit
 
 struct TimeSlider {
-    var sliderProgress:Int
+    var sliderProgress:Float
     var timeInSeconds:Int
 
     mutating func updateConsideringTotalTime(total:Int){
-        timeInSeconds = total * sliderProgress
+        timeInSeconds = total * Int(sliderProgress)
     }
 }
 
@@ -22,8 +22,20 @@ class SliderTableViewController: UITableViewController {
         
         let tSlider = sliders[indexPath.section]
         cell.timeSlider.setValue(Float(tSlider.sliderProgress), animated: true)
-
+        cell.timeSlider.tag = indexPath.row
+        cell.timeSlider.addTarget(self, action: "sliderChanged:", forControlEvents: .ValueChanged)
+        cell.timeSlider.maximumValue = (1.0 - totalProgress())
         return cell
+    }
+    
+    func sliderChanged(slider:UISlider) {
+        slider.maximumValue = (1.0 - totalProgress())
+        var tSlider = sliders[slider.tag]
+        tSlider.sliderProgress = slider.value
+        tSlider.updateConsideringTotalTime(totalSeconds)
+        print("slider changed to \(slider.value) at row \(tSlider.sliderProgress)")
+
+        sliders[slider.tag] = tSlider
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -43,6 +55,10 @@ class SliderTableViewController: UITableViewController {
     
     func secondsLeftToSpend() -> Int {
        return sliders.reduce(0) { $0 + $1.timeInSeconds }
+    }
+    
+    func totalProgress() -> Float {
+        return sliders.reduce(0) { $0 + $1.sliderProgress }
     }
     
 }
