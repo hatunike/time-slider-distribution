@@ -36,6 +36,7 @@ class SliderTableViewController: UITableViewController {
         print("slider changed to \(slider.value) at row \(tSlider.sliderProgress)")
 
         sliders[slider.tag] = tSlider
+        tableView.reloadData()
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
