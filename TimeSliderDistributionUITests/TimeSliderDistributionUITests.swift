@@ -31,6 +31,20 @@ class TimeSliderDistributionUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCUIDevice.sharedDevice().orientation = .Portrait
+        
+        let app = XCUIApplication()
+        app.tables["Empty list"].childrenMatchingType(.Button).element.tap()
+        
+        let tablesQuery = app.tables
+        let button = tablesQuery.childrenMatchingType(.Button).element
+        button.tap()
+        button.tap()
+        
+        let cell = tablesQuery.childrenMatchingType(.Cell).elementBoundByIndex(0)
+        cell.tap()
+        cell.sliders["0%"].tap()
+        
     }
     
 }
