@@ -12,14 +12,13 @@ struct TimeSlider {
 }
 
 class SliderTableViewController: UITableViewController {
-
+    
     @IBOutlet var totalTime: UITextField!
     var sliders = [TimeSlider]()
     var totalSeconds = 0
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as!SliderTableViewCell
-        
         let tSlider = sliders[indexPath.section]
         cell.timeSlider.setValue(Float(tSlider.sliderProgress), animated: true)
         cell.timeSlider.tag = indexPath.row
